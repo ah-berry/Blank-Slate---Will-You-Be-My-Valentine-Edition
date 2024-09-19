@@ -1,4 +1,3 @@
-import React from "react";
 import { BlankSlateCardProps } from "./Types";
 
 export default function BlankSlateCard({ blankSlateCard, isFinalFlip }: BlankSlateCardProps) {

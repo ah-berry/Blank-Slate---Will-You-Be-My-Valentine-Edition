@@ -1,5 +1,4 @@
 import { useState } from "react";
-import BlankSlateCard from "./BlankSlateCard";
 import BlankSlateGame from "./BlankSlateGame";
 import "./App.css";
 
@@ -29,22 +28,22 @@ const BLANK_SLATE_CARDS = [
 ];
 
 function App() {
-  const [blankSlateCards, setBlankSlateCards] = useState(BLANK_SLATE_CARDS);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   return (
     <div>
       <BlankSlateGame
         blankSlateCardIndex={currentCardIndex}
-        blankSlateCard={blankSlateCards[currentCardIndex]}
-        totalBlankSlateCards={blankSlateCards.length - 1}
+        blankSlateCard={BLANK_SLATE_CARDS[currentCardIndex]}
+        totalBlankSlateCards={BLANK_SLATE_CARDS.length - 1}
         key={currentCardIndex}
       />
       <img
         className="navigation-button"
         src="../right-arrow.png"
+        alt="Right arrow"
         onClick={() => {
-          if (currentCardIndex < blankSlateCards.length - 1) {
+          if (currentCardIndex < BLANK_SLATE_CARDS.length - 1) {
             setCurrentCardIndex(currentCardIndex + 1);
           } else {
             setCurrentCardIndex(0);
