@@ -20,6 +20,7 @@ export default function BlankSlateGame({blankSlateCardIndex, blankSlateCard, tot
     }
 
     function handleAudioPlayOnCard() {
+        // Setups audio event listener
         if (finalCard) {
             const audioElem: HTMLAudioElement = document.getElementById("audio") as HTMLAudioElement;
             const blankSlateCardEl = document.querySelector(".blank-slate-card");
@@ -29,10 +30,13 @@ export default function BlankSlateGame({blankSlateCardIndex, blankSlateCard, tot
 
     function setVisualsForFinalFlip() {
         if (finalFlip) {
-            // Change the body background color to red and play a song.
+            // Changes the background to falling petals when final card is 
+            // flipped to the back side.
             document.body.style.backgroundImage =
                 "url(../falling_petals.gif)";
         } else {
+            // Reverts the background to gradient pink hue when final card is 
+            // flipped to frontside.
             document.body.style.background =
                 "linear-gradient(179.4deg, rgb(253, 240, 233) 2.2%, rgb(255, 194, 203) 96.2%)";
         }

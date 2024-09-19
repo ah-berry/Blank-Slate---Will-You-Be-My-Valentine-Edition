@@ -1,3 +1,5 @@
+// Establishes the types of certain objects throughtout the application.
+
 export type BlankSlateCard = {
     id: number;
     front_side_word: string;
