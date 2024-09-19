@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+body {
+  /* Pink hue */
+  background: linear-gradient(
+    179.4deg,
+    rgb(253, 240, 233) 2.2%,
+    rgb(255, 194, 203) 96.2%
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.peony-flower-gif {
+  height: 80%;
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navigation-button {
+  line-height: 12px;
+  height: 40px;
+  width: 40px;
+  font-size: 8pt;
+  font-family: tahoma;
+  margin-top: 1px;
+  margin-right: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: transform 0.3s;
+}
+
+.navigation-button:hover {
+  animation: bubble 0.4s ease-out;
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.2);
   }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.blank-slate-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  transform-style: preserve-3d;
+  height: 150px;
+  width: 300px;
+  transition: 700ms;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+}
+
+.blank-slate-card.flipped {
+  --rotate-y: 180deg;
+}
+
+.blank-slate-card.flipped.final-flip {
+  border: rgb(255, 194, 203) 5px solid;
+  border-radius: 1rem;
+}
+
+.blank-slate-card .front,
+.blank-slate-card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+  font-weight: bolder;
+  font-size: 15pt;
+}
+
+.blank-slate-card .back.final-flip {
+  font-family: "Courier New", Courier, monospace;
+  font-family: cursive;
+  font-weight: bold;
+  color: rgb(184, 105, 118);
+}
+
+.blank-slate-card .back {
+  transform: rotateY(180deg);
 }
