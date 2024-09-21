@@ -23,8 +23,8 @@ The reason why I built this was for two simple reasons:
 
 ## Technologies Used
 
-React v18.3.1
-TypeScript v4.9.5
+* React v18.3.1
+* TypeScript v4.9.5
 
 ## Setup
 
