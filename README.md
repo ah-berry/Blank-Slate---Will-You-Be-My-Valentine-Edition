@@ -28,7 +28,7 @@ The reason why I built this was for two simple reasons:
 
 ## Setup
 
-To setup the application, [_npm_] (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [_yarn_](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) are required.
+To setup the application, [_npm_](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [_yarn_](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) are required.
 
 1. Open your terminal and `git clone` the GitHub repository URL in your desired directory.
 2. Navigate to the cloned directory with `cd <cloned_repository>` and install the project's dependencies with `npm install` or `yarn install`.
