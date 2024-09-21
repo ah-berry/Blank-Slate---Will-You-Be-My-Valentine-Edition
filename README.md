@@ -1,4 +1,4 @@
-# "Will you be my Valentine?" - Blank Slate Edition
+# Blank Slate - "Will you be my Valentine?" Edition
 
 An application that adds a "Will you be my Valentine?" spin to the [_Blank Slate_](https://theop.games/products/blank-slate-challenge?srsltid=AfmBOoofVi_J1ulslUaqVSaP3u2QElHsn-cFQ1h0CKzxXwbOVdQpLMtP) card game built using React.js with TypeScript.
 
